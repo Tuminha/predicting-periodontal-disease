@@ -1,6 +1,17 @@
-# Periodontal Disease Predictor 🦷
+<div align="center"></div>
 
-A machine learning project to predict periodontal disease using neural networks and advanced ML techniques.
+# 🦷 Periodontal Disease Predictor
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-orange.svg)](https://www.kaggle.com/datasets/renataadarmanto/periodontal-disease)
+
+*A machine learning project to predict periodontal disease using neural networks and advanced ML techniques.*
+
+[📊 Dataset](#-dataset) • [🚀 Getting Started](#-getting-started) • [🎓 Learning Objectives](#-learning-objectives) • [📋 Roadmap](#-roadmap)
+
+</div>
 
 ## 🎯 Project Overview
 
@@ -62,15 +73,67 @@ This project builds upon previous experience with neural networks (from the EV c
 - [ ] **Clinical Relevance**: Assess practical applicability of the model
 - [ ] **Documentation**: Create comprehensive analysis and recommendations
 
+## 📊 Dataset
+
+### Source
+This project utilizes the **Periodontal Disease Dataset** from Kaggle, created by [Renata A. Darmanto](https://www.kaggle.com/datasets/renataadarmanto/periodontal-disease).
+
+### Dataset Information
+- **📁 Structure**: Organized into train/validation/test splits
+- **🖼️ Content**: Medical images for periodontal disease classification
+- **📈 Size**: ~220 files (17.9 MB)
+- **🏷️ Classes**: Multiple periodontal disease categories
+- **📊 Usage**: 117 downloads, 668 views (as of September 2024)
+
+### Dataset Access
+```bash
+# Download via Kaggle API
+kaggle datasets download renataadarmanto/periodontal-disease
+
+# Or visit: https://www.kaggle.com/datasets/renataadarmanto/periodontal-disease
+```
+
+### Directory Structure
+```
+periodontal_disease/
+├── train/          # Training images
+├── val/            # Validation images  
+└── test/           # Test images
+```
+
 ## 🛠️ Technical Stack
 
-- **Python 3.x**
-- **PyTorch**: Neural network implementation
-- **scikit-learn**: Baseline models and preprocessing
-- **pandas**: Data manipulation and analysis
-- **numpy**: Numerical computations
-- **matplotlib/seaborn**: Data visualization
-- **Jupyter Notebooks**: Interactive development and analysis
+<table>
+<tr>
+<td align="center" width="20%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="40" height="40"/>
+<br><b>Python 3.8+</b>
+</td>
+<td align="center" width="20%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="40" height="40"/>
+<br><b>PyTorch</b>
+</td>
+<td align="center" width="20%">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" width="40" height="40"/>
+<br><b>Scikit-learn</b>
+</td>
+<td align="center" width="20%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" width="40" height="40"/>
+<br><b>Pandas</b>
+</td>
+<td align="center" width="20%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" width="40" height="40"/>
+<br><b>NumPy</b>
+</td>
+</tr>
+</table>
+
+- **🔬 PyTorch**: Neural network implementation and computer vision
+- **📊 scikit-learn**: Baseline models and preprocessing
+- **🐼 pandas**: Data manipulation and analysis
+- **🔢 numpy**: Numerical computations
+- **📈 matplotlib/seaborn**: Data visualization
+- **📓 Jupyter Notebooks**: Interactive development and analysis
 
 ## 📊 Expected Outcomes
 
@@ -100,11 +163,42 @@ This project emphasizes **learning over just getting results**. Each step includ
 
 ## 🚀 Getting Started
 
-1. **Dataset Selection**: Find an appropriate periodontal disease dataset on Kaggle
-2. **Environment Setup**: Ensure you have the required libraries installed
-3. **Data Exploration**: Start by understanding your dataset thoroughly
-4. **Follow the Roadmap**: Work through each phase systematically
+### Prerequisites
+```bash
+# Clone the repository
+git clone https://github.com/Tuminha/predicting-periodontal-disease.git
+cd predicting-periodontal-disease
+
+# Install dependencies
+pip install torch torchvision torchaudio
+pip install pandas numpy matplotlib seaborn
+pip install scikit-learn pillow jupyter
+pip install kaggle  # For dataset download
+```
+
+### Quick Start
+1. **📥 Download Dataset**: Use Kaggle API to get the periodontal disease dataset
+2. **🔍 Explore Data**: Start with data exploration in Jupyter notebooks
+3. **🏗️ Build Models**: Follow the roadmap for systematic development
+4. **📊 Evaluate**: Compare different approaches and analyze results
+
+### Project Structure
+```
+periodontal_disease_predictor/
+├── 📁 datasets/
+│   └── 📁 images/           # Downloaded image data
+├── 📁 notebooks/            # Jupyter notebooks for exploration
+├── 📁 models/              # Saved model files
+├── 📄 README.md            # This file
+└── 📄 requirements.txt     # Python dependencies
+```
 
 ---
 
-*Remember: The goal is to become great at ML through hands-on practice and deep understanding! 🎓*
+<div align="center">
+
+**🎓 Remember: The goal is to become great at ML through hands-on practice and deep understanding!**
+
+[⬆️ Back to Top](#-periodontal-disease-predictor)
+
+</div>
