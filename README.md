@@ -44,11 +44,11 @@ This project builds upon previous experience with neural networks (from the EV c
 - [x] **Data Exploration**: Analyzed dataset structure, image properties, and categories
 - [x] **Data Quality Assessment**: Identified image formats, dimensions, and class distribution
 
-### Phase 2: Data Preprocessing 🔄 IN PROGRESS
-- [ ] **Data Cleaning**: Handle image format variations (JPEG vs MPO)
-- [ ] **Image Preprocessing**: Resize, normalize, and augment images for training
-- [ ] **Data Encoding**: Create labels for 3-class classification (MGI=0, OHG=1, PFI=2)
-- [ ] **Feature Scaling**: Normalize pixel values for neural network training
+### Phase 2: Data Preprocessing ✅ COMPLETED
+- [x] **Data Cleaning**: Handled image format variations (JPEG vs MPO)
+- [x] **Dataset Class Creation**: Built custom PyTorch Dataset class for image loading
+- [x] **Data Encoding**: Created labels for 3-class classification (MGI=0, OHG=1, PFI=2)
+- [x] **Dataset Structure**: Successfully loaded all 1,376 images across three categories
 
 ### Phase 3: Baseline Models
 - [ ] **Simple Baseline**: Create a random classifier baseline for 3-class problem
@@ -142,10 +142,17 @@ datasets/images/
 - **Challenge Level**: Subtle visual differences between assessment categories
 - **Technical Setup**: Successfully configured PyTorch, PIL, and matplotlib for image processing
 
+#### **Phase 2: Data Preprocessing** ✅
+- **Custom Dataset Class**: Built `PeriodontalDataset` class inheriting from `torch.utils.data.Dataset`
+- **Image Loading**: Successfully loaded all 1,376 images with proper path handling
+- **Label Encoding**: Implemented 3-class classification labels (MGI=0, OHG=1, PFI=2)
+- **Data Structure**: Created lists of image paths and corresponding labels
+- **Technical Skills**: Learned nested loops, path manipulation, and PyTorch dataset architecture
+
 ### 🔄 **Current Status**
-- **Next Phase**: Data Preprocessing (image normalization, labeling, train/test split)
-- **Learning Focus**: Transitioning from tabular data (EV charging) to computer vision
-- **Technical Skills**: Building on existing PyTorch knowledge for image classification
+- **Next Phase**: Baseline Models (random classifier, logistic regression)
+- **Learning Focus**: Building on dataset class to create train/test splits and basic models
+- **Technical Skills**: Ready to implement `__getitem__` method and image preprocessing
 
 ## 🛠️ Technical Stack
 
