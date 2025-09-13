@@ -9,7 +9,7 @@
 
 *A machine learning project to predict periodontal disease using neural networks and advanced ML techniques.*
 
-[📊 Dataset](#-dataset) • [🚀 Getting Started](#-getting-started) • [🎓 Learning Objectives](#-learning-objectives) • [📋 Roadmap](#-roadmap)
+[📊 Dataset](#-dataset) • [🚀 Getting Started](#-getting-started) • [🎓 Learning Objectives](#-learning-objectives) • [📋 Roadmap](#-roadmap) • [✅ Progress](#-progress)
 
 </div>
 
@@ -39,24 +39,24 @@ This project builds upon previous experience with neural networks (from the EV c
 
 ## 📋 Project Roadmap
 
-### Phase 1: Data Foundation
-- [ ] **Dataset Acquisition**: Find and download appropriate periodontal disease dataset from Kaggle
-- [ ] **Data Exploration**: Understand dataset structure, features, and target variables
-- [ ] **Data Quality Assessment**: Identify missing values, outliers, and data quality issues
+### Phase 1: Data Foundation ✅ COMPLETED
+- [x] **Dataset Acquisition**: Downloaded periodontal disease dataset from Kaggle
+- [x] **Data Exploration**: Analyzed dataset structure, image properties, and categories
+- [x] **Data Quality Assessment**: Identified image formats, dimensions, and class distribution
 
-### Phase 2: Data Preprocessing
-- [ ] **Data Cleaning**: Handle missing values and outliers
-- [ ] **Feature Engineering**: Create new meaningful features from existing data
-- [ ] **Data Encoding**: Convert categorical variables to numerical format
-- [ ] **Feature Scaling**: Normalize/standardize features for neural network training
+### Phase 2: Data Preprocessing 🔄 IN PROGRESS
+- [ ] **Data Cleaning**: Handle image format variations (JPEG vs MPO)
+- [ ] **Image Preprocessing**: Resize, normalize, and augment images for training
+- [ ] **Data Encoding**: Create labels for 3-class classification (MGI=0, OHG=1, PFI=2)
+- [ ] **Feature Scaling**: Normalize pixel values for neural network training
 
 ### Phase 3: Baseline Models
-- [ ] **Simple Baseline**: Create a simple rule-based or statistical baseline
-- [ ] **Logistic Regression**: Implement logistic regression as a linear baseline
-- [ ] **Performance Benchmarking**: Establish performance baselines for comparison
+- [ ] **Simple Baseline**: Create a random classifier baseline for 3-class problem
+- [ ] **Logistic Regression**: Implement logistic regression on image features
+- [ ] **Performance Benchmarking**: Establish baselines for comparison with CNN
 
 ### Phase 4: Neural Network Development
-- [ ] **Network Architecture**: Design appropriate neural network structure
+- [ ] **CNN Architecture**: Design convolutional neural network for image classification
 - [ ] **Training Implementation**: Implement training loop with proper validation
 - [ ] **Hyperparameter Tuning**: Optimize learning rate, architecture, and regularization
 - [ ] **Model Persistence**: Save and load trained models
@@ -76,30 +76,76 @@ This project builds upon previous experience with neural networks (from the EV c
 ## 📊 Dataset
 
 ### Source
-This project utilizes the **Periodontal Disease Dataset** from Kaggle, created by [Renata A. Darmanto](https://www.kaggle.com/datasets/renataadarmanto/periodontal-disease).
+This project utilizes the **Periodontal Disease Dataset** from Kaggle, created by [jiaweihong2032](https://www.kaggle.com/datasets/jiaweihong2032/periodontal-data-for-testing).
 
 ### Dataset Information
-- **📁 Structure**: Organized into train/validation/test splits
-- **🖼️ Content**: Medical images for periodontal disease classification
-- **📈 Size**: ~220 files (17.9 MB)
-- **🏷️ Classes**: Multiple periodontal disease categories
-- **📊 Usage**: 117 downloads, 668 views (as of September 2024)
+- **📁 Structure**: Organized into 3 testing categories
+- **🖼️ Content**: Clinical intraoral photographs for periodontal disease classification
+- **📈 Size**: 1,376 images (1.43 GB)
+- **🏷️ Classes**: 3 periodontal disease assessment indices
+- **📊 Format**: RGB images (2784 × 1856 pixels)
+
+### Dataset Categories
+The dataset contains three types of periodontal disease assessment images:
+
+1. **MGI (Modified Gingival Index)**: 383 images
+   - Assessment of gum inflammation and health
+   - Focus on gingival tissue condition
+
+2. **OHG (Oral Hygiene Index)**: 619 images  
+   - Overall oral hygiene assessment
+   - Evaluation of dental cleanliness
+
+3. **PFI (Plaque Formation Index)**: 374 images
+   - Plaque accumulation measurement
+   - Bacterial buildup assessment
 
 ### Dataset Access
 ```bash
-# Download via Kaggle API
-kaggle datasets download renataadarmanto/periodontal-disease
+# Download via Kaggle Hub
+import kagglehub
+path = kagglehub.dataset_download("jiaweihong2032/periodontal-data-for-testing")
 
-# Or visit: https://www.kaggle.com/datasets/renataadarmanto/periodontal-disease
+# Or visit: https://www.kaggle.com/datasets/jiaweihong2032/periodontal-data-for-testing
 ```
 
 ### Directory Structure
 ```
-periodontal_disease/
-├── train/          # Training images
-├── val/            # Validation images  
-└── test/           # Test images
+datasets/images/
+├── MGI-testing/MGI/     # 383 Modified Gingival Index images
+├── OHG-testing/OHG/     # 619 Oral Hygiene Index images
+└── PFI-testing/PFI/     # 374 Plaque Formation Index images
 ```
+
+### Image Properties
+- **Dimensions**: 2784 × 1856 pixels
+- **Color Mode**: RGB (color images)
+- **Formats**: JPEG, MPO
+- **Content**: Frontal intraoral photographs showing anterior teeth and gums
+- **Challenge**: Subtle visual differences between assessment categories
+
+## ✅ Progress
+
+### 🎉 **Completed Milestones**
+
+#### **Phase 1: Data Foundation** ✅
+- **Dataset Discovery**: Successfully identified and downloaded the periodontal disease dataset
+- **Data Exploration**: Analyzed 1,376 clinical intraoral photographs
+- **Category Identification**: Discovered 3 assessment indices (MGI, OHG, PFI)
+- **Image Analysis**: Determined image properties (2784×1856 RGB, JPEG/MPO formats)
+- **Visual Exploration**: Displayed and compared sample images from each category
+
+#### **Key Discoveries** 🔍
+- **Problem Type**: 3-class image classification (MGI vs OHG vs PFI)
+- **Image Content**: Frontal intraoral photographs showing anterior teeth and gums
+- **Class Distribution**: OHG (619), PFI (374), MGI (383) - slight class imbalance
+- **Challenge Level**: Subtle visual differences between assessment categories
+- **Technical Setup**: Successfully configured PyTorch, PIL, and matplotlib for image processing
+
+### 🔄 **Current Status**
+- **Next Phase**: Data Preprocessing (image normalization, labeling, train/test split)
+- **Learning Focus**: Transitioning from tabular data (EV charging) to computer vision
+- **Technical Skills**: Building on existing PyTorch knowledge for image classification
 
 ## 🛠️ Technical Stack
 
