@@ -50,10 +50,11 @@ This project builds upon previous experience with neural networks (from the EV c
 - [x] **Data Encoding**: Created labels for 3-class classification (MGI=0, OHG=1, PFI=2)
 - [x] **Dataset Structure**: Successfully loaded all 1,376 images across three categories
 
-### Phase 3: Baseline Models
-- [ ] **Simple Baseline**: Create a random classifier baseline for 3-class problem
-- [ ] **Logistic Regression**: Implement logistic regression on image features
-- [ ] **Performance Benchmarking**: Establish baselines for comparison with CNN
+### Phase 3: Data Splitting and Preprocessing ✅ COMPLETED
+- [x] **Train/Test Split**: Successfully implemented train/test split using PyTorch's random_split
+- [x] **Transform Pipeline**: Created separate transforms for training (with augmentation) and testing
+- [x] **Data Preprocessing**: Implemented image resizing (224x224), normalization, and data augmentation
+- [x] **Dataset Structure**: Ready for PyTorch DataLoader integration with proper train/test datasets
 
 ### Phase 4: Neural Network Development
 - [ ] **CNN Architecture**: Design convolutional neural network for image classification
@@ -149,10 +150,17 @@ datasets/images/
 - **Data Structure**: Created lists of image paths and corresponding labels
 - **Technical Skills**: Learned nested loops, path manipulation, and PyTorch dataset architecture
 
+#### **Phase 3: Data Splitting and Preprocessing** ✅
+- **Train/Test Split**: Implemented 80/20 split using PyTorch's `random_split` function
+- **Transform Pipeline**: Created separate transforms for training (with augmentation) and testing
+- **Image Preprocessing**: Implemented resizing to 224x224, normalization, and data augmentation
+- **Data Augmentation**: Added random horizontal flips and rotations for training data
+- **Technical Skills**: Learned PyTorch transforms, data splitting, and preprocessing pipelines
+
 ### 🔄 **Current Status**
-- **Next Phase**: Baseline Models (random classifier, logistic regression)
-- **Learning Focus**: Building on dataset class to create train/test splits and basic models
-- **Technical Skills**: Ready to implement `__getitem__` method and image preprocessing
+- **Next Phase**: CNN Architecture Design and Training Implementation
+- **Learning Focus**: Building convolutional neural networks for medical image classification
+- **Technical Skills**: Ready to implement CNN architecture, training loops, and model evaluation
 
 ## 🛠️ Technical Stack
 
